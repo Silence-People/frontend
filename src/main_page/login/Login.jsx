@@ -46,7 +46,7 @@ const Login = () => {
           password: "",
         });
         setTimeout(() => {
-          window.location.href = "http://localhost:5173";
+          window.location.href = "https://main.d10x8axsum38x.amplifyapp.com/";
         }, 1000);
       } else {
         handleError(message);
