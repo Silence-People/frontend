@@ -33,7 +33,7 @@ function Signup() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://backend-qogy.onrender.com/signup",
+        "http://localhost:8080/signup",
         {
           ...inputValue,
         },
@@ -49,7 +49,7 @@ function Signup() {
         });
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:5174";
+          window.location.href = "http://localhost:5173";
         }, 1000);
       } else {
         handleError(message);
