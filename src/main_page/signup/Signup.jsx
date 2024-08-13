@@ -33,7 +33,7 @@ function Signup() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/signup",
+        "https://backend-cd5e.onrender.com/signup",
         {
           ...inputValue,
         },
