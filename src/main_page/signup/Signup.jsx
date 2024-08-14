@@ -36,11 +36,11 @@ function Signup() {
         "https://backend-cd5e.onrender.com/signup",
         {
           ...inputValue,
-        },
-        { withCredentials: true }
+        }
       );
-      const { success, message } = data;
+      const { token, success, message } = data;
       if (success) {
+        localStorage.setItem("token", token);
         setInputValue({
           ...inputValue,
           email: "",

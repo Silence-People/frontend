@@ -33,12 +33,13 @@ const Login = () => {
         "https://backend-cd5e.onrender.com/login",
         {
           ...inputValue,
-        },
-        { withCredentials: true }
+        }
       );
 
-      const { success, message } = data;
+      const { token, success, message } = data;
+
       if (success) {
+        localStorage.setItem("token", token);
         handleSuccess(message);
         setInputValue({
           ...inputValue,
